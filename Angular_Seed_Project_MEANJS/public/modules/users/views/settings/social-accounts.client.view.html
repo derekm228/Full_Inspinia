@@ -1,0 +1,38 @@
+<div class="wrapper wrapper-content" data-ng-controller="SettingsController">
+    <div class="row">
+        <div class="col-lg-6 col-lg-offset-3">
+            <div class="ibox text-center">
+                <div class="ibox-content">
+                    <h3 class="text-center" data-ng-show="hasConnectedAdditionalSocialAccounts()">Connected social accounts:</h3>
+
+                    <div class="text-center">
+                        <div data-ng-repeat="(providerName, providerData) in user.additionalProvidersData" class="remove-account-container">
+                            <i class="fa fa-{{providerName}}"></i>
+                            <a class="btn btn-danger btn-remove-account" data-ng-click="removeUserSocialAccount(providerName)">
+                                <i class="glyphicon glyphicon-trash"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <h3 class="col-md-12 text-center">Connect other social accounts:</h3>
+
+                    <a href="/auth/facebook" class="btn btn-white">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                    <a href="/auth/twitter" class="btn btn-white">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                    <a href="/auth/google" class="btn btn-white">
+                        <i class="fa fa-google-plus"></i>
+                    </a>
+                    <a href="/auth/linkedin" class="btn btn-white">
+                        <i class="fa fa-linkedin"></i>
+                    </a>
+                    <a href="/auth/github" class="btn btn-white">
+                        <i class="fa fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
